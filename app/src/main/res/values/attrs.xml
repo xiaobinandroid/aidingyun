@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SupportButton">
+        <attr name="supportButtonRippleColor" format="color" />
+        <attr name="supportButtonPressedColor" format="color" />
+        <attr name="supportButtonDisabledColor" format="color" />
+        <attr name="supportButtonNormalColor" format="color" />
+        <attr name="supportButtonCornerRadius" format="dimension" />
+    </declare-styleable>
+</resources>

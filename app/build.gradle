@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.antfortune.freeline'
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        applicationId "com.fuhui.aidingyun"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':core-framework')
+
+    compile rootProject.ext.dependencies["design"]
+    compile rootProject.ext.dependencies["percent"]
+    compile rootProject.ext.dependencies["annotations"]
+    compile rootProject.ext.dependencies["recyclerview-v7"]
+    compile rootProject.ext.dependencies["cardview-v7"]
+    compile rootProject.ext.dependencies["palette-v7"]
+    compile rootProject.ext.dependencies["constraint"]
+
+    compile rootProject.ext.dependencies["recyclerview-animators"]
+
+
+    compile rootProject.ext.dependencies["multidex"]
+
+    compile rootProject.ext.dependencies["transferee"]
+    compile rootProject.ext.dependencies["glideloader"]
+    compile rootProject.ext.dependencies["photoview"]
+    compile rootProject.ext.dependencies["SmartRefresh"]
+    compile rootProject.ext.dependencies["SmartRefreshHeader"]
+    compile rootProject.ext.dependencies["BRVAH"]
+    compile rootProject.ext.dependencies["EasySwipeMenu"]
+    compile rootProject.ext.dependencies["agentweb"]
+    compile rootProject.ext.dependencies["progressmanager"]
+    compile rootProject.ext.dependencies["Toasty"]
+    compile rootProject.ext.dependencies["recyclerview-animators"]
+    compile rootProject.ext.dependencies["viewanim_easing_library"]
+    compile rootProject.ext.dependencies["viewanim_library"]
+    compile rootProject.ext.dependencies["avi_loading"]
+
+
+    compile 'com.github.dmytrodanylyk.shadow-layout:library:1.0.3'
+    compile 'com.github.florent37:longshadow:1.0.1'
+    compile 'com.ocnyang:contourview:1.0.0'
+    compile 'com.github.lygttpod:SuperTextView:2.1.5'
+    compile 'com.github.clans:fab:1.6.4'
+    compile 'com.ufreedom.uikit:FloatingTextLibrary:0.2.0'
+    compile 'com.github.pinguo-zhouwei:MZBannerView:v2.0.0'//banner控件
+    compile 'q.rorbin:badgeview:1.1.3'
+
+    compile 'com.github.didikee:AndroidDonate:0.1.0'
+
+    compile('com.github.huburt-Hu:NewbieGuide:v1.2.0') {
+        exclude group: 'com.android.support'
+    }
+
+    compile 'com.lzy.net:okgo:3.0.4'
+
+    //compile 'me.iwf.photopicker:PhotoPicker:0.9.10@aar'//图片选择器 https://github.com/donglua/PhotoPicker
+    compile 'com.zhihu.android:matisse:0.5.0-alpha4'//图片选择器 https://github.com/zhihu/Matisse
+    compile 'top.zibin:Luban:1.1.3'//最接近微信朋友圈的图片压缩算法
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}

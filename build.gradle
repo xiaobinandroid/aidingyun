@@ -1,0 +1,35 @@
+apply from: 'global_config.gradle'
+
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'me.tatarka:gradle-retrolambda:3.7.0'
+        classpath 'com.antfortune.freeline:gradle:0.8.8'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        //google()
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+        maven { url 'https://dl.google.com/dl/android/maven2/'}
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        //由于魅族个推等第三方库使用了不同的仓库，需要加上这个
+        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+        maven { url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/" }
+        maven { url 'http://developer.huawei.com/repo/' }
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+

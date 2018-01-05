@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorTitle">#E25736</color>
+    <color name="colorToolBar">#F5F5F5</color>
+    <color name="colorTextOne">#030303</color>
+    <color name="colorTextTwo">#4b4a4b</color>
+    <color name="colorTextThird">#696769</color>
+    <color name="colorTextFour">#dcd8d8</color>
+    <color name="text_color_pri">#FF3A3A3A</color>
+    <color name="light_tv_black">#FF6A6868</color>
+</resources>
